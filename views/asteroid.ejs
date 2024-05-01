@@ -1,0 +1,56 @@
+<%- include("./partials/header.ejs") %>
+
+<body>
+    <div class="wrapper">
+        <div class="console">
+            <div class="console_screen asteroid">
+
+                <div class="skeleton_loader"></div>
+                
+                    <form class="return_form" action="" method="GET">
+                    <input class="return" type="submit" value="&LeftArrow;" formaction="/">
+                    </form>
+                
+                <div class="data header">
+                    <h2>NAME:</h2>
+                    <h2>MAGNITUDE:</h2>
+                    <h2>DIAMETER {</h2>
+                        <h3>KM:</h3>
+                        <h3>MILES:</h3>
+                        <h2>}</h2>
+                    <h2>DANGEROUS:</h2>
+                    <h2>CLOSEST:</h2>
+                    <h2>SPEED {</h2>
+                        <h3>KM/H:</h3>
+                        <h3>MP/H:</h3>
+                        <h2>}</h2>
+                </div>
+                <div class="data result">
+                    <h2><%= name %></h2>
+                    <h2><%= magnitude %></h2>
+                    <h2> {</h2>
+                        <h3><%= km %></h3>
+                        <h3><%= miles %></h3>
+                        <h2>}</h2>
+                    <h2><%= dangerous %></h2>
+                    <h2><%= closest %></h2>
+                    <h2> {</h2>
+                        <h3><%= kmh %></h3>
+                        <h3><%= mph %></h3>
+                        <h2>}</h2>
+                </div>
+            </div>
+
+            <div class="button_row">
+                <div class="radio_btn one"></div>
+                <div class="radio_btn two"></div>
+                <div class="radio_btn three"></div>
+                <div class="radio_btn four"></div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="./frontend.js"></script>
+</body>
+</html>

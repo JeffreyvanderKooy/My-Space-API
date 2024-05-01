@@ -1,0 +1,34 @@
+<%- include("./partials/header.ejs") %>
+
+    <body>
+        <div class="wrapper">
+            <div class="console">
+                <div class="console_screen asteroid imageOnDisplay">
+
+                        <div class="skeleton_loader"></div>
+
+                        <form class="return_form" action="" method="GET">
+                        <input class="return" type="submit" value="&LeftArrow;" formaction="/">
+                        </form>
+                    
+                    <div class="image_container" style="background-image: url(<%=content.url%>);">
+                        <p class="image_text"><%= content.explanation %> &copy; <%= content.copyright %>, <%= content.date %></p>
+                    </div>
+                    <h3 id="hover_text">Hover over the image for a description</h3>
+                   
+                </div>
+
+                <div class="button_row">
+                    <div class="radio_btn one"></div>
+                    <div class="radio_btn two"></div>
+                    <div class="radio_btn three"></div>
+                    <div class="radio_btn four"></div>
+                </div>
+            </div>
+        </div>
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="./frontend.js"></script>
+
+    </body>
+</html>

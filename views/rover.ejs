@@ -1,0 +1,45 @@
+
+<%- include("./partials/header.ejs") %>
+
+<body>
+    <body>
+        <div class="wrapper">
+            <div class="console">
+                <div class="console_screen asteroid imageOnDisplay">
+                    
+                    <div class="skeleton_loader"></div>
+
+                        <form class="return_form" action="" method="GET">
+                        <input class="return" type="submit" value="&LeftArrow;" formaction="/">
+                        </form>
+                    
+                    <h2 id="date_text"><%= date %>, Mars</h2>
+
+                    <div class="carousel">
+                        <button class="arrow prev" type="button"><p>&LeftArrow;</p></button>
+                        
+                            <div class="carousel_track">
+                                <% for (i=0; i<content.length; i++) { %>
+                                <div style="background-image: url(<%= content[i] %>);" class="carousel_item" ></div>
+                                <% } %>
+                            </div>
+                        
+                        <button class="arrow next" type="button"><p>&RightArrow;</p></button>
+                </div>
+            </div>
+
+            <div class="button_row">
+                <div class="radio_btn one"></div>
+                <div class="radio_btn two"></div>
+                <div class="radio_btn three"></div>
+                <div class="radio_btn four"></div>
+            </div>
+        </div>
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="./frontend.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    </body>
+    </html>
+</body>
+</html>
